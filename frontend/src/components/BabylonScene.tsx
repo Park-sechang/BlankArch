@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react'
 import { Engine, Scene, ArcRotateCamera, Vector3, HemisphericLight, MeshBuilder } from '@babylonjs/core'
 import { useBabylonEngine } from '../core/useBabylonEngine'
+import '../styles/main.scss'
 
 const BabylonScene = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null!)
@@ -32,7 +33,11 @@ const BabylonScene = () => {
     }
   }, [scene, engine])
 
-  return <canvas ref={canvasRef} style={{ width: '100%', height: '100%' }} />
+  return (
+    <div className="babylon-container">
+      <canvas ref={canvasRef} />
+    </div>
+  )
 }
 
 export default BabylonScene 

@@ -1,0 +1,31 @@
+
+
+// 기본 리셋 및 글로벌 스타일
+body {
+  margin: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  
+}
+
+// 캔버스 컨테이너
+.babylon-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+
+  canvas {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+  }
+}
+
+// 오버레이 요소용 공통 스타일
+.overlay-content {
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+}
